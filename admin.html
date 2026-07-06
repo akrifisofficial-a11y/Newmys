@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Админка</title>
+<link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head>
+<body>
+<header><div class="container"><a href="/" class="logo">Anivolume<span>.tv</span></a></div></header>
+<main class="container">
+  <div id="login-box" class="form" style="max-width:400px; margin:60px auto;">
+    <h2>Вход в админку</h2>
+    <input type="password" id="password" placeholder="Пароль">
+    <button class="btn" onclick="login()" style="margin-top:12px; width:100%;">Войти</button>
+    <p id="login-error" style="color:#ef4444; margin-top:10px;"></p>
+  </div>
+  <div id="admin-panel" style="display:none;">
+    <h2>Панель управления</h2>
+    <div class="form">
+      <h3>Добавить аниме</h3>
+      <input id="title" placeholder="Название">
+      <input type="file" id="cover">
+      <textarea id="desc" placeholder="Описание"></textarea>
+      <input id="kodik_id" placeholder="Kodik ID для всего аниме">
+      <input id="vk_url" placeholder="VK ссылка для всего аниме">
+      <button class="btn" onclick="addAnime()">Добавить</button>
+    </div>
+    <div id="anime-list"></div>
+  </div>
+</main>
+<script src="config.js"></script><script src="admin.js"></script></body></html>
